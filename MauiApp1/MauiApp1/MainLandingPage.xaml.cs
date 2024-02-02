@@ -7,7 +7,6 @@ namespace MauiApp1
         public MainLandingPage()
         {
             InitializeComponent();
-            HomePageComponent.Parameters = new Dictionary<string, object> { ["ViewModel"] = new HomePageViewModel() };
         }
     }
 }

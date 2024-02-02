@@ -9,7 +9,7 @@
     <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html">
         <BlazorWebView.RootComponents>
             <RootComponent Selector="#menubar" ComponentType="{x:Type views:MenuBar}" />
-            <RootComponent Selector="#app" ComponentType="{x:Type local:Main}" x:Name="HomePageComponent"  />
+            <RootComponent Selector="#app" ComponentType="{x:Type local:Main}"/>
         </BlazorWebView.RootComponents>
     </BlazorWebView>
 
