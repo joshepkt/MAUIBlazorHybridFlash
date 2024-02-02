@@ -1,0 +1,90 @@
+﻿@page "/"
+@using MauiApp1.ViewModels
+@using MauiApp1.Views
+
+<main class="main-container">
+        <section class="left-sidebar">
+            <div class="left-sidebar-top-row">
+            </div>
+
+            <div class="mytabs ">
+                <label for="tabFacilityTier">
+                    <span>
+                        <i class="fa-regular fa-bars"></i>
+                    </span>
+                </label>
+                <div class="tab">
+                    Tree View Goes here
+                </div>
+            </div>
+
+        </section>
+
+        <section class="homepage-container">
+            <div class="forms-text">forms</div>
+            <input class="search-input"
+                   placeholder="Search for a form." />
+            <div class="tile-list">
+
+              Forms Go Here
+
+
+            <h1>Hello, world!</h1>
+
+            Welcome to your new app.
+
+            <SurveyPrompt Title="How is Blazor working for you?" />
+            <br/>
+
+            <button type="button" @onclick="goback">Go Back</button>
+            </div>
+        </section>
+
+        <section class="right-sidebar">
+            <div class="task-list-header">
+                Right Side Bar
+            </div>
+        </section>
+    </main>
+    <style>
+    .main-container {
+        margin-top: 0.7rem;
+        height: 100%;
+        background-color: #F3F5F9;
+        display: flex;
+    }
+
+    .homepage-container {
+        padding: 2rem;
+        background-color: #111723;
+        transition: all 0.5s ease;
+        border-radius: 10px;
+        flex: 1 1 auto;
+        overflow: auto;
+    }
+
+    .forms-text {
+        padding: 0 2rem 2rem 2rem;
+        text-transform: uppercase;
+        color: #C8D1E3;
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .right-sidebar-expand {
+        min-width: 15rem;
+        height: 100%;
+    }
+
+
+    </style>
+@code {
+
+    [Parameter] public HomePageViewModel ViewModel { get; set; } = default!;
+
+    private async Task goback(MouseEventArgs e)
+    {
+        Application.Current.MainPage = new NavigationPage(new PinPage());
+    }
+}

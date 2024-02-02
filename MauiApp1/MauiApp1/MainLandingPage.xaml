@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp1"
+             xmlns:views="clr-namespace:MauiApp1.Views"
+             x:Class="MauiApp1.MainLandingPage"
+             NavigationPage.HasNavigationBar="False">
+
+    <BlazorWebView x:Name="blazorWebView" HostPage="wwwroot/index.html">
+        <BlazorWebView.RootComponents>
+            <RootComponent Selector="#menubar" ComponentType="{x:Type views:MenuBar}" />
+            <RootComponent Selector="#app" ComponentType="{x:Type local:Main}" x:Name="HomePageComponent"  />
+        </BlazorWebView.RootComponents>
+    </BlazorWebView>
+
+</ContentPage>
